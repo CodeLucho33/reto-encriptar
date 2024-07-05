@@ -38,6 +38,10 @@ function reverseText(){
 document.getElementById('copiar_texto').innerHTML= `${desencriptado}`;
 }
 
-function copiText(){
+
     
-}
+    const copiText = async ()=>{
+        let texto= document.getElementById('copiar_texto').innerHTML;
+        await navigator.clipboard.writeText(texto);
+        alert('¡Ten cuidado, tienes un secreto en el portapapeles!')
+    }
