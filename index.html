@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,44 @@
     <link rel="stylesheet" href="stryles.css">
     <script src="script.js"></script>
 </head>
+
 <body>
     <header>
-         <div class="logo">
+        <div class="logo">
             <img src="" alt="Logo ">
         </div>
     </header>
 
-    
+
 
     <main>
-<div class="zona__encriptado">
+        <div class="contenido">
 
-<input id="texto__encriptable" type="text" placeholder="Ingrese texto" name="encriptar">
-<img src="" alt="Icono de alerta">
+            <div class="zona__encriptado">
 
-<button  onclick="getText(); " name="encriptar" >Encriptar</button>
-<button onclick="reverseText();" >Desencriptar</button>
+                <input id="texto__encriptable" type="text" placeholder="Ingrese texto" name="encriptar"><br>
+                <img src="" alt="Icono de alerta"><br>
+
+                <button onclick="getText(); " name="encriptar">Encriptar</button>
+                <button onclick="reverseText();">Desencriptar</button>
 
 
 
 
-</div>
+            </div>
 
-<div class="zona__desencriptar">
-    <p id="copiar_texto">No se ha encontrado ningun texto.</p>
+            <div class="zona__desencriptar">
+                <p id="copiar_texto">No se ha encontrado ningun texto.</p>
 
-<button onclick="copiText();">Copiar</button>
+                <button onclick="copiText();">Copiar</button>
 
-    
 
-</div>
+
+            </div>
+
+
+        </div>
+
 
 
     </main>
@@ -49,6 +57,7 @@
             </p>
         </div>
     </footer>
-    
+
 </body>
+
 </html>

@@ -4,3 +4,16 @@
 --colorTres:#80B9AD;
 --colorCua:#B3E2A7;
 }
+
+.zona__encriptado{
+
+}
+
+.zona__desencriptar{
+  
+}
+
+.contenido{ 
+    display: flex;
+    justify-content: space-between;
+}
