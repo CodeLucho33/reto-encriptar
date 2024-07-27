@@ -6,50 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Euler Project</title>
     <link rel="stylesheet" href="stryles.css">
-    <script src="script.js"></script>
+
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="" alt="Logo ">
+            <img src="images/Logo.png" alt="Logo ">
         </div>
     </header>
-
-
-
     <main>
         <div class="contenido">
-
             <div class="zona__encriptado">
+                <input id="texto__encriptable" type="text" placeholder="Ingrese el texto aqui" name="encriptar"><br>
+                <div>
+                    <ul class="advertencia">
+                        <li> <img src="images/bi_exclamation-circle-fill.png" alt="Icono de alerta" width="25px">
+                        </li>
+                        <li>
+                            <h4>Solo letras minúsculas y sin acentos</h4>
+                        </li>
+                    </ul>
 
-                <input id="texto__encriptable" type="text" placeholder="Ingrese texto" name="encriptar"><br>
-                <img src="" alt="Icono de alerta"><br>
 
-                <button onclick="getText(); " name="encriptar">Encriptar</button>
-                <button onclick="reverseText();">Desencriptar</button>
-
-
-
-
+                </div>
+                <button class="btn-encriptar" onclick="getText(); " name="encriptar">Encriptar</button>
+                <button class="btn-desencriptar" onclick="reverseText();">Desencriptar</button>
             </div>
 
+            <div>
+                <form id="new-keys-user" class="keys-user">
+                    <label for="key-a">Clave para la letra "a":</label>
+                    <input type="text" id="key-a" name="key-a" required>
+                    <label for="key-e">Clave para la letra "e":</label>
+                    <input type="text" id="key-e" name="key-e" required>
+                    <label for="key-i">Clave para la letra "i":</label>
+                    <input type="text" id="key-i" name="key-i" required>
+                    <label for="key-o">Clave para la letra "o":</label>
+                    <input type="text" id="key-o" name="key-o" required>
+                    <label for="key-u">Clave para la letra "u":</label>
+                    <input type="text" id="key-u" name="key-u" required>
+
+                    <button id="guardar-claves-usuario" type="submit">Guardar</button>
+                </form>
+                <button type="button" id="new-keys">Crear claves propias</button>
+            </div>
             <div class="zona__desencriptar">
+                <img src="/images/noFound.png" alt="No found" height="250px" width="250px">
                 <p id="copiar_texto">No se ha encontrado ningun texto.</p>
-
-                <button onclick="copiText();">Copiar</button>
-
-
-
+                <button class="btn-copiar" onclick="copiText();">Copiar</button>
             </div>
-
-
         </div>
-
-
-
     </main>
-
     <footer>
         <div class="rodapie">
             <p>Contacto: code.lucho33@gmail.com <br>
@@ -57,7 +65,7 @@
             </p>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
