@@ -18,7 +18,7 @@
     <main>
         <div class="contenido">
             <div class="zona__encriptado">
-                <input id="texto__encriptable" type="text" placeholder="Ingrese el texto aqui" name="encriptar"><br>
+                <input id="texto__encriptable" class="texto__encriptable" type="text" placeholder="Ingrese el texto aqui" name="encriptar"><br>
                 <div>
                     <ul class="advertencia">
                         <li> <img src="images/bi_exclamation-circle-fill.png" alt="Icono de alerta" width="25px">
@@ -26,12 +26,23 @@
                         <li>
                             <h4>Solo letras minúsculas y sin acentos</h4>
                         </li>
+                        <li> <img src="images/bi_exclamation-circle-fill.png" alt="Icono de alerta" width="25px">
+                        </li>
+                        <li>
+                            <h4>Para crear claver propias, ingrese el texto y de clic en el boton crear claves propias; ingrese las claves y de crick en guardar.</h4>
+                        </li>
+
+
                     </ul>
 
 
                 </div>
-                <button class="btn-encriptar" onclick="getText(); " name="encriptar">Encriptar</button>
-                <button class="btn-desencriptar" onclick="reverseText();">Desencriptar</button>
+                <div class="contenerdor-botones">
+  <button class="btn-encriptar" onclick="getText(); " name="encriptar">Encriptar</button><br>
+                <button class="btn-desencriptar" onclick="reverseText();">Desencriptar</button><br>
+                <button type="button" id="new-keys">Crear claves propias</button><br>
+                </div>
+              
             </div>
 
             <div>
@@ -49,11 +60,11 @@
 
                     <button id="guardar-claves-usuario" type="submit">Guardar</button>
                 </form>
-                <button type="button" id="new-keys">Crear claves propias</button>
+                
             </div>
             <div class="zona__desencriptar">
-                <img src="/images/noFound.png" alt="No found" height="250px" width="250px">
-                <p id="copiar_texto">No se ha encontrado ningun texto.</p>
+                <img src="/images/noFound.png" alt="No found" height="250px" width="250px" disabled>
+                <p id="copiar_texto" class="copiar_texto">No se ha encontrado ningun texto.</p>
                 <button class="btn-copiar" onclick="copiText();">Copiar</button>
             </div>
         </div>

@@ -4,66 +4,117 @@
     --colorTres: #80B9AD;
     --colorCua: #B3E2A7;
 }
-
+/* LAUyOUT */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: darkblue;
+    width: 100%;
 }
 
-#texto__encriptable{
+#texto__encriptable {
     font-weight: bold;
     font-size: 1.5rem;
     width: 400px;
     height: 400px;
     border: none;
     border-radius: 10px;
-  
+
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
 
 }
-button{
+
+.contenerdor-botones{
+    width: 60%;
+    margin: 70px 10px;
+    background-color: green;
+    display: block;
+    border-radius: 30px;
+}
+button {
     padding: 10px;
     width: 200px;
     border-radius: 10px;
-    cursor: pointer;
+    margin: 10px 10px;
+  
 }
-.btn-encriptar{
+button:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-encriptar {
     color: whitesmoke;
     background-color: darkblue;
     border: none;
 }
-.btn-desencriptar,.btn-copiar{
+
+.btn-desencriptar,
+.btn-copiar {
     border: 1px solid darkblue;
     background-color: #D8DFE8;
     color: darkblue;
 
 }
-.zona__desencriptar{
-    width: 400px;
-    height: 500px;
-    background-color: whitesmoke;
-    border-radius: 20px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-  align-items: center;
 
-}
+
 
 .contenido {
-    display: flex;
-    justify-content: space-around;
-   
+   display: flex;
+   flex-direction: row;
+
+}
+/* TYPHOGRAPY */
+.copiar_texto, .texto__encriptable{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+}
+.texto__encriptable{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+}
+img{
+    display: none;
 }
 
+
+/* MEDIA QUERYS */
+
+@media (min-width:481px) {
+    .contenerdor-botones{
+        display: flex;
+    }
+    img{
+        display: inline;
+    }
+    .zona__desencriptar {
+        width: 400px;
+        height: 500px;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+
+@media((max-width:480px) ){
+.contenido{
+   flex-direction: column;
+   justify-content: space-around;
+}
+}
 .advertencia {
     display: flex;
     flex-direction: row;
     list-style: none;
-    
+
     width: 400px;
     height: 25px;
     border: none;
@@ -75,7 +126,8 @@ h4 {
     margin: 0;
     padding-top: 5px;
 }
-.keys-user{
+
+.keys-user {
     display: none;
     flex-direction: column;
     margin: 10px;
